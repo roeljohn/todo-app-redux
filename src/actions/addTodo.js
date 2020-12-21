@@ -10,7 +10,8 @@ export function addTodo(content) {
     })
     .then(response => response.json())
     .then(json => {
-        dispatch(addTodoSuccess(json.title, content.id));
+      debugger
+        dispatch(addTodoSuccess(json.title, json.id));
       })
     .catch(error =>
       dispatch(completeTodoFailure(error))

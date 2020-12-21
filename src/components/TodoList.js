@@ -22,6 +22,7 @@ class TodoList extends React.Component {
 
     return (
       <ul className="todo-list">
+        {console.log('new todo', todos)}
       {todos && todos.length
         ? todos.map((todo, index) => {
             return <Todo key={`todo-${todo.id}`} todo={todo} />;
